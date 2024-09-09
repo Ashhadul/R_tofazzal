@@ -1,0 +1,7 @@
+ data<-read.csv(choose.files())
+summary(data)
+model<-lm(data$Y~data$X2+data$X3+data$X4)
+ summary(model)
+ my_array <- array(as.matrix(data[, 2:5]), dim = c(nrow(data), 4))
+ View(my_array)
+ model <- lm(Y ~ X2 + X3 + X4, data = data)
